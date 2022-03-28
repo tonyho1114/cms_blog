@@ -27,7 +27,7 @@ const Home = ({posts}) => {
   )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const posts = (await getPosts()) || [];
   return {
     props: {posts}
