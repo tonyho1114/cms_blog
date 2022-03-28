@@ -1,10 +1,10 @@
-import type { NextPage } from 'next'
+import  { NextPage } from 'next'
 import Head from 'next/head'
 import {PostCard, Categories, PostWidget} from '../components'
 import {getPosts} from '../services'
 import { FeaturedPosts} from '../sections'
 
-const Home: NextPage = ({posts}) => {
+const Home = ({posts}) => {
   return (
     <div className="container mx-auto px-10 mb-8 ">
       <Head>
