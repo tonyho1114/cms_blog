@@ -1,4 +1,4 @@
-import  { NextPage } from 'next'
+
 import Head from 'next/head'
 import {PostCard, Categories, PostWidget} from '../components'
 import {getPosts} from '../services'
@@ -27,7 +27,7 @@ const Home = ({posts}) => {
   )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const posts = (await getPosts()) || [];
   return {
     props: {posts}
